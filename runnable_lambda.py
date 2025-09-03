@@ -28,7 +28,7 @@ parallel_chain = RunnableParallel({
     'word_count' : runnable_word_counter
 })
 
-final_chain = RunnableSequence(joke_gen_ai, parallel_chain)
+final_chain = RunnableSequence(joke_gen_ai, parallel_chain) #later on converted to joke_gen_ai |  parallel_chain
 
 
 print(final_chain.invoke({'topic' : 'ai'}))
